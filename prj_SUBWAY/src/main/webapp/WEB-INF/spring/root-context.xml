@@ -11,10 +11,10 @@
 	<bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
 		<!-- log4jdbc --> 
 		<property name="driverClassName" value="net.sf.log4jdbc.sql.jdbcapi.DriverSpy"></property>
- 		<property name="jdbcUrl" value="jdbc:log4jdbc:oracle:thin:@//172.20.10.7:1521/xe"></property>
- 		<!-- <property name="jdbcUrl" value="jdbc:log4jdbc:oracle:thin:@//192.168.35.155:1521/xe"></property> -->
-		<property name="username" value="scott"></property>
-		<property name="password" value="tiger"></property>
+ 		<!-- <property name="jdbcUrl" value="jdbc:log4jdbc:oracle:thin:@//172.20.10.7:1521/xe"></property> -->
+ 		<property name="jdbcUrl" value="jdbc:log4jdbc:oracle:thin:@//192.168.35.40:1521/xe"></property>
+		<property name="username" value="subway"></property>
+		<property name="password" value="password"></property>
 	</bean>
 	
 	<!-- HikariCP configuration -->
