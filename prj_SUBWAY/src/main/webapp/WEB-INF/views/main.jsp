@@ -234,7 +234,8 @@
 					<a href="#">
 						<div class="icon" style="background-position: -210px 0px;"></div>
 						<strong>1:1 문의</strong> 
-						<span>개선/문의사항 test</span>
+						<span>개선/문의사항</span>
+						<span>개선/문의사항</span>
 				</a></li>
 			</ul>
 		</div>
