@@ -1,0 +1,22 @@
+1. ojdbc6.jar
+    - oracle db 접속 jdbc 드라이버
+
+2. mysql-connector-java-5.1.42.jar
+    - MySql db 접속 jdbc 드라이버
+
+3. jstl 폴더
+    - JSTL 태그 라이브러리
+
+4. dbcp 폴더
+    - 커넥션 풀 설정 라이브러리
+
+5. mybatis 폴더
+    - mybatis 프레임워크 라이브러리
+    - mapper.xml (sql 문 작성)
+    - sqlmap.xml (dataSource, mapper 설정)
+
+6. cos.jar
+    - 첨부파일 업로드/다운로드 라이브러리
+
+7. json-simple-1.1.1.jar
+    - json 처리
