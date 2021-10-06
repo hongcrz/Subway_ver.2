@@ -1,0 +1,198 @@
+@charset "UTF-8";
+
+	.menu_content{
+		margin: auto;
+	}
+/* 메뉴 리스트 팝업창 관련  */
+	/*팝업창*/
+#popup {
+    display: none; /*숨기기*/
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+}
+
+#popmenu {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 300px;
+    height: 200px;
+    text-align: center;
+    background: #fff;
+}
+
+#popmenu p {
+    margin-top: 80px;
+}
+
+.exit {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translate(-50%,0);
+    width: 60px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    background: #007AAE;
+    cursor: pointer;
+}
+
+
+
+/*카테고리 스크립트 관련 */
+ 	.tab_button {
+          text-align: center;
+          padding: 30px;
+        }
+ 	.tab_button li.on {
+          color: #fff;
+          font-weight: bold;
+          font-size: 20px;
+        }
+	
+	 .tab_button:after {
+          content: "";
+          display: block;
+          clear: both;
+        }
+	.tab_button li{
+          display: inline-block;
+          width:auto;
+          height: 20px;
+          margin-left: 5px;
+          margin-right: 5px;
+          text-align: center;
+          line-height: 20px;
+          cursor: pointer;
+          color: #fff;
+        }
+
+	.category ul li a{
+	color: #fff;
+	}
+/* 메뉴 관련 css */
+	
+	.tab_content .menu-detail-pop{
+		display: none;
+		z-index: 6;
+		position: absolute;
+		cursor: default;
+	}
+	
+	.menu_content div ul.tab_content li ul li{
+		width: 370px;
+		height: 330px;
+		background-color: #fff;
+		float: left;
+		margin: 30px 0 0 30px;
+		text-align: center;
+		cursor: pointer;
+	}
+	.body ul {
+	list-style: none;
+	}
+
+	.menu_content .tab_content ul{
+		display: block; 
+		width: 400px;
+		height: 360px;
+		float: left
+	}
+	.menu_content li .label_new{
+		position: relative;
+		left: 0;
+		top: 15px;
+		z-index: 3;
+		line-height: 120%;
+		display: block;
+		float: left;
+		background-color: #ffc300;
+		color: #fff;
+		font-size: 15px;
+		font-weight: bold;
+		padding: 5px 10px 5px;
+	}
+	.menu_content li .label_hot{
+		position: relative;
+		left: 0;
+		top: 15px;
+		z-index: 3;
+		line-height: 120%;
+		display: block;
+		float: left;
+		background-color: #a80000;
+		color: #fff;
+		font-size: 15px;
+		font-weight: bold;
+		padding: 5px 10px 5px;
+	}
+	.menu_content li .label_season{
+		position: relative;
+		left: 0;
+		top: 15px;
+		z-index: 3;
+		line-height: 120%;
+		display: block;
+		float: left;
+		background-color: #58006c;
+		color: #fff;
+		font-size: 15px;
+		font-weight: bold;
+		padding: 5px 10px 5px;
+	}
+	.menu_content li .label_party{
+		position: relative;
+		left: 0;
+		top: 15px;
+		z-index: 3;
+		line-height: 120%;
+		display: block;
+		float: left;
+		background-color: #58006c;
+		color: #fff;
+		font-size: 15px;
+		font-weight: bold;
+		padding: 5px 10px 5px;
+	}
+	.menu_content div ul .detail-more .img{
+		width: 270px; 
+		height: 189px; 
+		margin: 20px auto 0; 
+		position: relative; 
+		z-index: 1;
+	}
+	.menu_content li .tit{
+	 color: #292929;
+	 font-size: 22px;
+	 font-weight : bold;
+	 font-family: font_ns, sans-serif;
+	 display: block;
+	 margin : 10 0 7px;
+	 position : relative;
+	 z-index: 5;
+	 top: 0;
+	}
+	.menu_content li .eng{
+	 color: #666666;
+	 font-size: 16px;
+	 font-family: font_sw;
+	 display: block;
+	 letter-spacing: -0.06em;
+	 position : relative;
+	 z-index: 5;
+	 top: 0;
+	}
+	.menu_content li .cal{
+	 color: #ffc300;
+	 font-size: 18px;
+	 font-family: font_sw;
+	 font-weight: bold;
+	 display: block;
+	 letter-spacing: -0.05em;
+	 z-index: 1;
+	}
+	

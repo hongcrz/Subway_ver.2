@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="kr.co.subway.mapper.CartMapper">
+    <!--장바구니 조회 -->
+    <select id="listCart" resultType="kr.co.subway.domain.CartDTO">
+    	select c.cno, p.pno,p.pname,p.pprice ,c.userid, p.purl ,c.csize,c.bread,c.toasting,c.cheese,c.choption,c.vege,c.sauce,c.addoption,c.moption,c.setoption,c.useraddress
+        from tbl_user u, tbl_cart c, tbl_product p
+        where u.userid=c.userid and c.pno=p.pno and c.userid=#{userid} order by cno
+    </select>
+</mapper>

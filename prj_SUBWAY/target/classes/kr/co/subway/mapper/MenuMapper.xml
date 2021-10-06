@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace = "kr.co.subway.mapper.MenuMapper" >
+  
+  	<!-- 메뉴 등록  -->
+  	<insert id="insert_menu" parameterType="kr.co.subway.domain.ProductVO">
+		insert into tbl_product
+		values(#{pno}, #{pname}, #{pprice} ,#{purl}, #{pdesc}, #{pname_eng}, #{pcal})
+	</insert>
+	<!-- 메뉴 삭제  -->
+	<delete id="remove_menu">
+		delete from tbl_product where pno=#{pno}
+	</delete>
+  	
+  	<!-- 샌드위치 메뉴에 필요한 데이터를 불러오기 위한 쿼리 -->
+  	<select id="getList_sandwich_all" parameterType="map" resultType="kr.co.subway.domain.ProductVO" >
+  		select * from tbl_product where pno between #{min_pno} and #{max_pno} or pno between #{min_pno2} and #{max_pno2} order by pno
+  	</select>
+  	<select id="getList_sandwich_classic" parameterType="map" resultType="kr.co.subway.domain.ProductVO" >
+  		select * from tbl_product where pno between #{min_pno} and #{max_pno}
+  	</select>
+  	<select id="getList_sandwich_fresh" parameterType="map" resultType="kr.co.subway.domain.ProductVO" >
+  		select * from tbl_product where pno between #{min_pno} and #{max_pno}
+  	</select>
+  	<select id="getList_sandwich_premium" parameterType="map" resultType="kr.co.subway.domain.ProductVO" >
+  		select * from tbl_product where pno between #{min_pno} and #{max_pno}
+  	</select>
+  	
+  	<!-- 유닛 메뉴에 필요한 데이터를 불러오기 위한 쿼리 -->
+  	<select id="getList_unit_all" parameterType="map" resultType="kr.co.subway.domain.ProductVO" >
+  		select * from tbl_product where pno between #{min_pno} and #{max_pno} or pno between #{min_pno2} and #{max_pno2} order by pno
+  	</select>
+  	<select id="getList_unit_classic" parameterType="map" resultType="kr.co.subway.domain.ProductVO" >
+  		select * from tbl_product where pno between #{min_pno} and #{max_pno}
+  	</select>
+  	<select id="getList_unit_fresh" parameterType="map" resultType="kr.co.subway.domain.ProductVO" >
+  		select * from tbl_product where pno between #{min_pno} and #{max_pno}
+  	</select>
+  	<select id="getList_unit_premium" parameterType="map" resultType="kr.co.subway.domain.ProductVO" >
+  		select * from tbl_product where pno between #{min_pno} and #{max_pno}
+  	</select>
+  	
+  	
+  	<!-- 샐러드 메뉴에 필요한 데이터를 불러오기 위한 쿼리 -->
+  	<select id="getList_salad_all" parameterType="map" resultType="kr.co.subway.domain.ProductVO" >
+  		select * from tbl_product where pno between #{min_pno} and #{max_pno} or pno between #{min_pno2} and #{max_pno2} order by pno
+  	</select>
+  	<select id="getList_salad_classic" parameterType="map" resultType="kr.co.subway.domain.ProductVO" >
+  		select * from tbl_product where pno between #{min_pno} and #{max_pno}
+  	</select>
+  	<select id="getList_salad_fresh" parameterType="map" resultType="kr.co.subway.domain.ProductVO" >
+  		select * from tbl_product where pno between #{min_pno} and #{max_pno}
+  	</select>
+  	<select id="getList_salad_premium" parameterType="map" resultType="kr.co.subway.domain.ProductVO" >
+  		select * from tbl_product where pno between #{min_pno} and #{max_pno}
+  	</select>
+  </mapper>

@@ -1,0 +1,100 @@
+@charset "UTF-8";
+
+.form-box {
+	float: none;
+	margin: 40px auto 80px;
+}
+
+.form-box-A{
+	width: 75%;	
+}
+
+.form-box-B{
+	width: 40%;
+}
+
+
+.txt-box {
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+
+.tbl-box {
+	width: 100%;
+	
+	margin-bottom: 20px;
+}
+
+.tbl {
+	border-collapse: collapse;
+	border:  1px solid rgb(229, 229, 229);
+	width: 100%;
+	height: auto;
+	
+}
+
+.tbl tr th:first-child {
+	padding-top: 20px;
+	width: 35%;
+}
+
+.tbl tr td:last-child {
+	width: 20%;
+}
+
+.tbl tr:nth-child(n+4){
+	text-align: left;
+}
+
+.dl-box {
+	width:100%;	
+	margin: auto;
+	
+	padding: 20px 0 10px;
+	
+	text-align: center;
+	
+	border: 1px solid rgb(229, 229, 229);
+}
+
+
+.dl-box input {
+	border: none;
+	background-color: rgb(232, 240, 254);
+}
+
+.tbl input {
+	border: none;
+	border-bottom: 1px solid rgb(229, 229, 229);
+	background-color: none;
+}
+
+
+.input-box {
+	float: right;
+	margin-top: 5px;
+	margin-bottom: 10px;
+}
+
+
+.btn-submit {
+	background-color: #009223;
+	width: 100%;
+	height: 40px;
+	color: #fff;
+	
+	border-radius: 5px;
+	
+	border: none;
+}
+
+.btn-submit:hover {
+	background-color: #0d5f20;
+	border-radius: 5px;
+}
+
+.btn-overlap {
+	background-color: #009223;
+	color: #fff;
+	padding: 4px 8px;
+}

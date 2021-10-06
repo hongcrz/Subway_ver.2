@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+#notice-ul {
+	padding-left: 0px;
+}
+
+a.fixed-list{
+	color: #009223 !important;
+}
+
+a.updown-list {
+	color: #999 !important;	
+}
+
+#notice-ul img {
+	width: 15px;
+	height: 15px;
+}
+
+

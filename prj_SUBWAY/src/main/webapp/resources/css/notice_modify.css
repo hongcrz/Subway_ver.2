@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+h2{
+	color: green;
+	font-weight: 3px;
+}
+
+.contactForm .form-control {
+    border: none;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+}
+
+.btn btn-primary{
+	margin: 10px;
+}
+
+div input{
+/* 	text-transform: uppercase; */
+    display: inline-block;
+    padding: 4px 10px;
+    margin-bottom: 7px;
+    margin-right: 4px;
+    border-radius: 4px;
+    color: #000000;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+
+.content{
+	border: 3px solid #ccc !important;
+	margin-top: 134px;
+	margin-bottom: 40px;
+}

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<!-- password encoding -->
+	<bean id="bcryptPasswordEncoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
+		
+	<bean id="userService" class="kr.co.subway.security.CustomUserDetailService"></bean>
+	
+	<!-- browser  -->
+	<security:http auto-config="true" use-expressions="true">
+		<!-- auto-config : 자동 설정 / user-escpression : SpEL 사용(hasRole() 등)  -->
+		
+ 		<!-- 권한 설정 -->
+		<security:form-login 
+			username-parameter = "userid"
+			password-parameter = "userpw"
+			login-page = "/member/login"
+		/>
+		
+		<security:intercept-url pattern="/notice/register" access="hasRole('ROLE_ADMIN')"/> 
+		<security:intercept-url pattern="/notice/modify" access="hasRole('ROLE_ADMIN')"/> 		
+		<!-- <security:intercept-url pattern="/member/**" access="hasRole('ROLE_ADMIN')"/> -->
+		<security:intercept-url pattern="/**" access="permitAll" />
+			
+		<security:logout 
+			logout-url="/member/logout"
+			logout-success-url="/" 
+			invalidate-session="true" 
+			delete-cookies="remember-me"
+		/>
+		
+		<!-- token -->
+		<security:csrf disabled="true"/>
+		
+		<security:access-denied-handler error-page="/member/accessError"/>
+		<security:access-denied-handler ref="customAccessDenied"/>
+		
+		<!-- 자동완성 기능  / 일주일 간 지속  -->
+		<security:remember-me data-source-ref="dataSource" token-validity-seconds="604800"/>
+	</security:http>
+	
+	
+	<!-- system  -->
+	<security:authentication-manager>
+		<!--  manager에 정보를 제공하는 provider  -->
+		<security:authentication-provider user-service-ref="userService">
+			<security:password-encoder ref="bcryptPasswordEncoder"/>
+		</security:authentication-provider> 
+	</security:authentication-manager>
+
+</beans>

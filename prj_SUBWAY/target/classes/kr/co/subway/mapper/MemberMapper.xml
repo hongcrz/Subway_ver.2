@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+ <mapper namespace = "kr.co.subway.mapper.MemberMapper">
+ 	<select id="read" resultType="kr.co.subway.security.domain.CustomUserDetails">
+ 		SELECT * FROM tbl_user WHERE userid = #{userid}
+ 	</select>
+ 	
+ 	<select id="searchByID" resultType="int">
+ 		SELECT COUNT(*) FROM tbl_user WHERE userid = #{userid}
+ 	</select>
+ 
+ 	<insert id="insert">
+ 		INSERT INTO tbl_user(userid, userpw, username, useremail, useraddress, auth) 
+		VALUES(#{userid}, #{userpw}, #{uname, jdbcType=VARCHAR}, #{useremail, jdbcType=VARCHAR}, #{useraddress, jdbcType=VARCHAR}, #{auth})
+ 	</insert>
+ </mapper> 

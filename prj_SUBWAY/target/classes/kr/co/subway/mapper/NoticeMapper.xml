@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+ <mapper namespace = "kr.co.subway.mapper.NoticeMapper">
+ 
+<!--  	<select id="read" resultType="kr.co.subway.domain.NoticeVO"> -->
+<!-- 		select * from tbl_notice where nno=#{nno} -->
+<!-- 	</select> -->
+	<select id="read" resultType="kr.co.subway.domain.NoticeVO">
+		select 
+			n.nno, n.title, n.content, n.regdate, a.uuid, a.nno, a.fileName, a.uploadpath
+		from tbl_notice n
+		inner join tbl_attach a
+			on n.nno = a.nno 
+		where n.nno=#{nno}
+	</select>
+	
+	<delete id="delete">
+		delete from tbl_notice where nno=#{nno}
+	</delete>
+	
+	<insert id="insert">
+		insert into tbl_notice(nno, title, content, uuid)
+		values(seq_notice.nextval, #{title}, #{content}, #{uuid})
+	</insert>
+ 	
+ 	<update id="update">
+		update tbl_notice
+		set
+			title=#{title},
+			content=#{content}
+		where 
+			nno=#{nno}
+	</update>
+	
+	<insert id="insertSelectKey">
+		<selectKey keyProperty="nno" order="BEFORE" resultType="long"> 
+			select seq_notice.nextval from dual
+		</selectKey>
+		insert into tbl_notice(nno, title, content)
+		values(#{nno}, #{title}, #{content})
+	</insert>
+	
+	<sql id="search">
+		<trim prefix="(" suffix=") AND " prefixOverrides="OR">
+			<foreach item='type' collection="typeArr">
+				<trim prefix="OR">
+					<choose>
+						<when test="type == 'T'.toString()">
+							title like '%'||#{keyword}||'%'
+						</when>
+					</choose>
+				</trim>
+			</foreach>
+		</trim>
+	</sql>
+	
+	<select id="getListWithPaging" resultType="kr.co.subway.domain.NoticeVO">
+		<![CDATA[
+			select nno, title, content, regdate
+			from (
+   				select /*+index_desc(tbl_notice pk_notice) */
+       				rownum rn, nno, title, content, regdate
+   				from tbl_notice
+   				where 
+   		]]>
+   				
+   			<include refid="search"></include>
+   		
+   		<![CDATA[		
+   				rownum <= #{pageNum} * #{amount}
+				order by nno desc	
+				)
+			where rn > (#{pageNum} -1) * #{amount}
+		]]>
+	</select>
+	
+	<select id="getTotalCount" resultType="int">
+		select count(*) from tbl_notice where 
+		<include refid="search"></include>
+		nno > 0
+	</select>
+	
+ </mapper> 

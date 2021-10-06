@@ -1,0 +1,138 @@
+@charset "UTF-8";
+
+/* 메뉴 관련 css */
+ 		 .tab_btn li.on {
+          background-color: gray;
+          color: red;
+        }
+	
+	 .tab_button:after {
+          content: "";
+          display: block;
+          clear: both;
+        }
+	.tab_button li{
+          float : left;
+          display: block;
+          width: 110px;
+          height: 20px;
+          margin-left: 5px;
+          margin-right: 5px;
+          background-color: aqua;
+          color: #000;
+          text-align: center;
+          line-height: 20px;
+        }
+
+	.category ul li a{
+	color: #fff;
+	}
+	.menu_content div ul.tab_content li ul li{
+		width: 370px;
+		height: 330px;
+		background-color: #fff;
+		float: left;
+		margin: 30px 0 0 30px;
+		text-align: center
+	}
+	.body ul {
+	list-style: none;
+	}
+	.menu_content ul li:after{
+		background-color: #009223;
+		position: absolute;
+	}
+	.menu_content li .label_new{
+		position: relative;
+		left: 0;
+		top: 15px;
+		z-index: 3;
+		line-height: 120%;
+		display: block;
+		float: left;
+		background-color: #ffc300;
+		color: #fff;
+		font-size: 15px;
+		font-weight: bold;
+		padding: 5px 10px 5px;
+	}
+	.menu_content li .label_hot{
+		position: relative;
+		left: 0;
+		top: 15px;
+		z-index: 3;
+		line-height: 120%;
+		display: block;
+		float: left;
+		background-color: #a80000;
+		color: #fff;
+		font-size: 15px;
+		font-weight: bold;
+		padding: 5px 10px 5px;
+	}
+	.menu_content li .label_season{
+		position: relative;
+		left: 0;
+		top: 15px;
+		z-index: 3;
+		line-height: 120%;
+		display: block;
+		float: left;
+		background-color: #58006c;
+		color: #fff;
+		font-size: 15px;
+		font-weight: bold;
+		padding: 5px 10px 5px;
+	}
+	.menu_content li .label_party{
+		position: relative;
+		left: 0;
+		top: 15px;
+		z-index: 3;
+		line-height: 120%;
+		display: block;
+		float: left;
+		background-color: #58006c;
+		color: #fff;
+		font-size: 15px;
+		font-weight: bold;
+		padding: 5px 10px 5px;
+	}
+	.menu_content div ul li .img{
+		width: 270px; 
+		height: 189px; 
+		margin: 20px auto 0; 
+		position: relative; 
+		z-index: 1;
+	}
+	.menu_content li .tit{
+	 color: #292929;
+	 font-size: 22px;
+	 font-weight : bold;
+	 font-family: font_ns, sans-serif;
+	 display: block;
+	 margin : 10 0 7px;
+	 position : relative;
+	 z-index: 5;
+	 top: 0;
+	}
+	.menu_content li .eng{
+	 color: #666666;
+	 font-size: 16px;
+	 font-family: font_sw;
+	 display: block;
+	 letter-spacing: -0.06em;
+	 position : relative;
+	 z-index: 5;
+	 top: 0;
+	}
+	.menu_content li .cal{
+	 color: #ffc300;
+	 font-size: 18px;
+	 font-family: font_sw;
+	 font-weight: bold;
+	 display: block;
+	 letter-spacing: -0.05em;
+	 z-index: 1;
+	}
+	
