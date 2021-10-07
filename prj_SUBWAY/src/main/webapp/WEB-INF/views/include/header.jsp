@@ -32,8 +32,10 @@
 <link rel="stylesheet" href="/resources/css/notice_register.css">
 <link rel="stylesheet" href="/resources/css/member.css">
 <link rel="stylesheet" href="/resources/css/menu.css">
+<link rel="stylesheet" href="/resources/css/footer.css">
 <link rel="stylesheet" href="/resources/css/header.css">
 <link rel="stylesheet" href="/resources/css/main.css">
+<link rel="stylesheet" href="/resources/css/mysub.css">
 
 <!--  bootstrap script -->
 <script src="/resources/bootstrap/js/jquery.min.js"></script>

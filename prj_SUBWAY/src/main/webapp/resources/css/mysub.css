@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+/* font */
+.font_roboto{
+	font-family: 'Roboto', sans-serif;
+}
+
+.menu_line{
+	color:#f0f0f0;
+	margin:0;
+}
+
+/* content */
+.mysub_subtitle{
+	background-color: #f6f6f6;
+	padding-top:70px;
+	padding-bottom:50px;
+	font-size:40px;
+	text-align:center;
+	font-weight:bold;
+	color:#292929;
+}
+
+
+.mysub_member{
+	background-color: #f6f6f6;
+	width:100%;
+	height:700px;
+}
+
+.mysub_member_active{
+	width:800px;
+	height:300px;
+	margin:auto;
+	margin-bottom:20px;
+}
+
+
+.mysub_info{
+	float:left;
+	width:380px;
+	height:300px;
+	padding : 70px 10px 42px;
+	margin:0 10px;
+	text-align: center;
+	color:#fff;
+}
+
+.btn{
+	font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 30px;
+    transition-duration: 0.2s;
+}
+
+.go_view{
+	display:block;
+	position: relative;
+    bottom:-60px;
+	border:2px solid #fff;
+	width:130px;
+	margin:auto;
+}
+
+.btn span{
+	color:#fff;
+	font-size: 14px;
+}
+
+.info_title {
+	font-weight: bold;
+	color:#fff;
+}
+.info_subtitle{
+	font-size:300%;
+	font-weight: bold;
+	color:#fff;
+}
+
+.mysub_user{
+	background-color: #ffffff;
+	border: 7px solid #ffc300;
+	border-top-left-radius: 50px;
+	text-align: center;
+}
+.mysub_user .info_title{
+	font-size:200%;
+	font-weight: bold;
+	color:#000;
+}
+.mysub_user .btn span{
+	color:#999;
+	font-size: 14px;
+}
+
+.mysub_user .go_view{
+	border:2px solid #999;
+}
+
+.mysub_point{
+	background-color: #009223;
+	border-top-right-radius: 15px;
+}
+
+.mysub_order{
+	background-color: #9631a8;
+	
+}
+
+.mysub_coupon{
+	background-color: #ff8300;
+	border-bottom-right-radius: 50px;
+}
+
+
+
+

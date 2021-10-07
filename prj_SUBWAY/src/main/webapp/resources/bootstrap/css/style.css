@@ -8703,16 +8703,19 @@ textarea.form-control {
 .ftco-footer {
   font-size: 16px;
   background: #252525;
-  padding: 5em 0 3em 0; }
-  .ftco-footer .logo {
+  padding: 2em 0 1em 0; 
+  text-align: left;
+}
+.ftco-footer .logo {
     font-size: 34px !important;
     text-transform: uppercase;
     font-weight: 800 !important;
-    line-height: 1; }
-    .ftco-footer .logo a {
-      color: #fff; }
-      .ftco-footer .logo a span {
-        color: #4e9525; }
+	line-height: 1; 
+}
+.ftco-footer .logo a {
+  color: #fff; }
+.ftco-footer .logo a span {
+  color: #4e9525; }
   .ftco-footer .ftco-footer-widget h2 {
     font-weight: normal;
     color: #fff;

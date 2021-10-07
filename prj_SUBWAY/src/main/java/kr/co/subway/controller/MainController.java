@@ -41,4 +41,12 @@ public class MainController {
 		
 		return "main";
 	}
+	
+	@RequestMapping(value = "/mysub")
+	public String goMySub(Model model) {
+		log.info("go to mysub ..... ");
+		return "/mysub/mysub";
+	}
+	
+	
 }	
