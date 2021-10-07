@@ -7,7 +7,7 @@
 		         </div>
 		         
 		         <div class = "modal-body">
-		         	<form action="/cart/cartlist" method="POST" name="customMenu" id="customMenu">
+		         	<form action="/order/cartPage" method="GET" name="customMenu" id="customMenu">
 		         	
 		         		<div class="process step1">
 				            <div class = "form-group modal-center">

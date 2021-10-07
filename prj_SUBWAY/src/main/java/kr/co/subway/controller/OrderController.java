@@ -2,15 +2,20 @@ package kr.co.subway.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import kr.co.subway.domain.ProductVO;
+import kr.co.subway.service.CartService;
 import kr.co.subway.service.OrderService;
 import lombok.Setter;
 import lombok.extern.log4j.Log4j;
@@ -23,9 +28,9 @@ public class OrderController {
 	@Setter(onMethod_ = @Autowired)
 	private OrderService service;
 	
-	@GetMapping("/step1")
-	public void goStep1(Model model) {
-		log.info("open /order/step1 ..... ");
+	@GetMapping("/orderPage")
+	public void goOrderPage(Model model) {
+		log.info("open /order/orderPage ..... ");
 		
 		// base product list 
 		model.addAttribute("prlist", service.getList(100, 199));
@@ -65,6 +70,23 @@ public class OrderController {
 		model.addAttribute("prlist", service.getList(min_pno, max_pno));
 		
 		return service.getList(min_pno, max_pno);
+	}
+	
+	
+	@Autowired
+	private CartService service2;
+	
+	@GetMapping("/cartPage")
+	public void goCartPage(HttpServletRequest request, Model model) {
+		log.info("go to /order/cartPage ..... ");
+		
+		
+		HttpSession session=request.getSession(); 
+		String userid="123456";
+		
+		model.addAttribute("listcart",service2.listCart(userid));
+		
+
 	}
 	
 }
