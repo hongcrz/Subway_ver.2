@@ -154,7 +154,7 @@
 							<div>
 								<ul id="sub_menu" style="background-color: white; width: 100%;">
 									<li><a href="#">FAST-SUB</a></li>
-									<li><a href="/order/step1">HOME-SUB</a></li>
+									<li><a href="/order/orderPage">HOME-SUB</a></li>
 									<li><a href="#">단체주문</a></li>
 									<li><a>&nbsp</a></li>
 									<li><a>&nbsp</a></li>

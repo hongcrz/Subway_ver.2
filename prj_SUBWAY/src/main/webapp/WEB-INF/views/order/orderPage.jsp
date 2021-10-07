@@ -584,7 +584,7 @@
 
 
 
-	<!-- 여기서부터 order/step1 영역입니다  -->
+	<!-- 여기서부터 order/orderPage 영역입니다  -->
 	<div id="container" >
 	   	<div class=top-text>
 	   		<h1><b>Home-Sub</b></h1>
