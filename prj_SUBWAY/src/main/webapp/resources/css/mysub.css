@@ -40,10 +40,11 @@
 	float:left;
 	width:380px;
 	height:300px;
-	padding : 70px 10px 42px;
+	padding : 70px 10px 0px;
 	margin:0 10px;
 	text-align: center;
 	color:#fff;
+	position:relative;
 }
 
 .btn{
@@ -56,11 +57,13 @@
 }
 
 .go_view{
-	display:block;
-	position: relative;
-    bottom:-60px;
+	position: absolute;
+	left:50%;
+	transform:translate(-50%,0);
+	bottom:40px;
 	border:2px solid #fff;
 	width:130px;
+	height:40px;
 	margin:auto;
 }
 
@@ -72,11 +75,20 @@
 .info_title {
 	font-weight: bold;
 	color:#fff;
+	margin-bottom:35px;
 }
+
 .info_subtitle{
-	font-size:300%;
+	font-size:250%;
 	font-weight: bold;
 	color:#fff;
+}
+
+.info_subtitle2{
+	font-size:160%;
+	font-weight: bold;
+	color:#fff;
+    margin-left: -7px;
 }
 
 .mysub_user{
@@ -85,11 +97,15 @@
 	border-top-left-radius: 50px;
 	text-align: center;
 }
+
 .mysub_user .info_title{
-	font-size:200%;
+	font-size:170%;
 	font-weight: bold;
 	color:#000;
+	float:left;
+	line-height: 120px;
 }
+
 .mysub_user .btn span{
 	color:#999;
 	font-size: 14px;
@@ -114,6 +130,23 @@
 	border-bottom-right-radius: 50px;
 }
 
+/* images */
+.user_me{
+	width:110px;
+	height:145px;
+	float:left;
+	margin:0 20px;
+	position: relative;
+    top: -20px;
+}
 
-
+.mysub_badge{
+	width:110px;
+	height:110px;
+	position:absolute;
+	right: -30px;
+    top: 175px;
+    
+    filter: drop-shadow(7px 6px 8px #555);
+}
 
