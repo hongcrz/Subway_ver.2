@@ -65,6 +65,10 @@
 			        	로그아웃
 			        </button>
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			        <input type="button" value="MY SUB" onclick="location.href='/mysub'"
+			        	style="color: #666666; font-size: 13px; font-weight: normal; height: 30px; background-color: #fff; border: none;"/>
+			        	
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 					<a href="/order/cart">
 						<img alt="cart" src="../../../resources/image/ETC_icon/cart2.png">
 					</a>
